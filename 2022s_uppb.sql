@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 31, 2022 at 08:55 AM
+-- Generation Time: May 31, 2022 at 10:05 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -155,15 +155,40 @@ CREATE TABLE `monitoring` (
   `id` int(5) NOT NULL,
   `tgl` datetime NOT NULL,
   `lokasi` text NOT NULL,
-  `ket` text NOT NULL
+  `ket` text NOT NULL,
+  `total` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `monitoring`
 --
 
-INSERT INTO `monitoring` (`idmonitoring`, `id`, `tgl`, `lokasi`, `ket`) VALUES
-(1, 6, '2022-05-29 21:32:00', 'Kabupaten Tapin', 'Pemantauan Daerah Kebun Getah Karet daerah sekitarnya');
+INSERT INTO `monitoring` (`idmonitoring`, `id`, `tgl`, `lokasi`, `ket`, `total`) VALUES
+(1, 6, '2022-05-29 21:32:00', 'Kabupaten Tapin', 'Pemantauan Daerah Kebun Getah Karet daerah sekitarnya', 5500),
+(2, 9, '2022-05-31 15:56:00', 'Banjarbaru', 'Pemantauan Daerah Kebun Karet di Banjarbaru', 500);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rincian`
+--
+
+CREATE TABLE `rincian` (
+  `idrincian` int(5) NOT NULL,
+  `idmonitoring` int(5) NOT NULL,
+  `jumlahpohon` int(5) NOT NULL,
+  `usiapohon` int(2) NOT NULL,
+  `pupuk` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `rincian`
+--
+
+INSERT INTO `rincian` (`idrincian`, `idmonitoring`, `jumlahpohon`, `usiapohon`, `pupuk`) VALUES
+(1, 1, 1000, 1, 'Urea'),
+(2, 1, 2000, 4, 'SP-36'),
+(3, 2, 200, 7, 'Kieserit/Dolomit');
 
 -- --------------------------------------------------------
 
@@ -257,6 +282,13 @@ ALTER TABLE `monitoring`
   ADD KEY `id` (`id`);
 
 --
+-- Indexes for table `rincian`
+--
+ALTER TABLE `rincian`
+  ADD PRIMARY KEY (`idrincian`),
+  ADD KEY `idmonitoring` (`idmonitoring`);
+
+--
 -- Indexes for table `transaksi`
 --
 ALTER TABLE `transaksi`
@@ -295,7 +327,13 @@ ALTER TABLE `inventorimasuk`
 -- AUTO_INCREMENT for table `monitoring`
 --
 ALTER TABLE `monitoring`
-  MODIFY `idmonitoring` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idmonitoring` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `rincian`
+--
+ALTER TABLE `rincian`
+  MODIFY `idrincian` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -325,6 +363,12 @@ ALTER TABLE `inventorimasuk`
 --
 ALTER TABLE `monitoring`
   ADD CONSTRAINT `monitoring_ibfk_1` FOREIGN KEY (`id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `rincian`
+--
+ALTER TABLE `rincian`
+  ADD CONSTRAINT `rincian_ibfk_1` FOREIGN KEY (`idmonitoring`) REFERENCES `monitoring` (`idmonitoring`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `transaksi`

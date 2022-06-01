@@ -35,6 +35,10 @@
                                 <input class="form-control" type="text" value="<?= $data['lokasi'] ?>" name="lokasi" required>
                             </div>
                             <div class="form-group">
+                                <label>Total Pohon Karet</label>
+                                <input class="form-control" type="number" name="total" value="<?= $data['total'] ?>"  required>
+                            </div>
+                            <div class="form-group">
                                 <label>Keterangan</label>
                                 <input class="form-control" type="text" value="<?= $data['ket'] ?>" name="ket" required>
                             </div>
@@ -61,8 +65,9 @@
     $lokasi = $_REQUEST['lokasi'];
     $id     = $_REQUEST['id'];
     $ket    = $_REQUEST['ket'];
+    $total  = $_REQUEST['total'];
 
-    $ubah = mysqli_query($kon,"UPDATE monitoring SET id = '$id', lokasi = '$lokasi', tgl = '$tgl', ket = '$ket' WHERE idmonitoring = '$idmonitoring'");
+    $ubah = mysqli_query($kon,"UPDATE monitoring SET id = '$id', lokasi = '$lokasi', tgl = '$tgl', total = '$total', ket = '$ket' WHERE idmonitoring = '$idmonitoring'");
     ?> <script>alert("Berhasil Diubah");window.location='monitoring.php';</script> <?php
   }
 ?>

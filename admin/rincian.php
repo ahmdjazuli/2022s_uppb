@@ -7,7 +7,7 @@
                 <h4 class="modal-title" id="myModalLabel">Cetak</h4>
             </div>
             <div class="modal-body">
-                <form action="../report/laporanMonitoring.php" target="_blank" method="post">
+                <form action="../report/laporanRincian.php" target="_blank" method="post">
                 <label>Bulan</label>
                 <select name="bulan" class="form-control">
                   <option value="">Pilih</option>
@@ -53,7 +53,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header"><button class="btn btn-primary btn-lg"><a href="monitoring_input.php" style="color: white; text-decoration: none">+Data Pemantauan Daerah Kebun</a></button>
+                <h1 class="page-header"><button class="btn btn-primary btn-lg"><a href="rincian_input.php" style="color: white; text-decoration: none">+Data Rincian Pemantauan</a></button>
                 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"> Cetak </button></h1>
             </div>
         </div>
@@ -66,29 +66,25 @@
                                 <thead class="success">
                                     <tr>
                                         <th>No</th>
-                                        <th>Tanggal (WITA)</th>
-                                        <th>Nama Petani</th>
-                                        <th>Lokasi</th>
-                                        <th>Luas Lahan</th>
-                                        <th>Total Pohon Karet</th>
-                                        <th>Keterangan</th>
+                                        <th>Nama Pemantauan</th>
+                                        <th>Jumlah Pohon</th>
+                                        <th>Usia Pohon</th>
+                                        <th>Pupuk</th>
                                         <th><i class="fa fa-toggle-on"></i></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php $no=1; $query = mysqli_query($kon, "SELECT * FROM monitoring INNER JOIN user ON monitoring.id = user.id ORDER BY tgl DESC");
+                                    <?php $no=1; $query = mysqli_query($kon, "SELECT * FROM rincian INNER JOIN monitoring ON rincian.idmonitoring = monitoring.idmonitoring ORDER BY idrincian DESC");
                                         while($data = mysqli_fetch_array($query)){ ?>
                                             <tr class="odd gradeX">
                                                     <td><?= $no++; ?></td>
-                                                    <td><?= date('d/m/Y H:i',strtotime($data['tgl'])); ?></td>
-                                                    <td><?= $data['nama'] ?></td>
-                                                    <td><?= $data['lokasi'] ?></td>
-                                                    <td><?= $data['luaslahan'] ?></td>
-                                                    <td><?= $data['total'] ?></td>
-                                                    <td><?= $data['ket'] ?></td>
+                                                    <td><?= '('.date('d/m/Y H:i',strtotime($data['tgl'])).') '.$data['ket']; ?></td>
+                                                    <td><?= $data['jumlahpohon'] ?></td>
+                                                    <td><?= $data['usiapohon'] ?> tahun</td>
+                                                    <td><?= $data['pupuk'] ?></td>
                                                     <td>
-                                                        <a href="monitoring_edit.php?idmonitoring=<?php echo $data['idmonitoring']; ?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil-alt"></i></a>
-                                                        <a href="delete.php?idmonitoring=<?php echo $data['idmonitoring'] ?>" class="btn btn-primary btn-sm"><i class="fa fa-trash"></i></a>
+                                                        <a href="rincian_edit.php?idrincian=<?php echo $data['idrincian']; ?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil-alt"></i></a>
+                                                        <a href="delete.php?idrincian=<?php echo $data['idrincian'] ?>" class="btn btn-primary btn-sm"><i class="fa fa-trash"></i></a>
                                                     </td>
                                                 </tr>
                                         <?php } ?>

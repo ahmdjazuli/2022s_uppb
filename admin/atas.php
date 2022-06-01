@@ -58,11 +58,11 @@
                 </ul>
                 <!-- /.navbar-top-links -->
 
-<div class="navbar-default sidebar" role="navigation" style="overflow-y: scroll; height: 600px;">
+<div class="navbar-default sidebar" role="navigation">
     <div class="sidebar-nav navbar-collapse">
         <ul class="nav" id="side-menu">
             <li>
-                <a href="index.php"><i class="fa fa-home fa-fw"></i> Halaman Utama</a>
+                <a href="index.php"><i class="fa fa-home fa-fw"></i> Laporan/Report</a>
             </li>
             <li>
                 <a href="user.php"><i class="fa fa-user fa-fw"></i> Data Pengguna</a>
@@ -82,8 +82,17 @@
                 </ul>
             </li>
             <li>
-                <a href="monitoring.php"><i class="fa fa-search-location fa-fw"></i> Pemantauan Daerah Kebun</a>
+                <a href="#"><i class="fa fa-tasks fa-fw"></i> Pemantauan<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="monitoring.php"><i class="fa fa-search-location fa-fw"></i> Daerah Kebun</a>
+                    </li>
+                    <li>
+                        <a href="rincian.php"><i class="fa fa-search fa-fw"></i> Rincian Pemantauan</a>
+                    </li>
+                </ul>
             </li>
+            
             <li>
                 <a href="transaksi.php"><i class="fa fa-shopping-bag fa-fw"></i> Transaksi</a>
             </li>

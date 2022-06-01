@@ -32,5 +32,9 @@
 	}else if (isset($_GET['idmonitoring'])) {
 		mysqli_query($kon, "DELETE FROM monitoring WHERE idmonitoring='$_REQUEST[idmonitoring]'");
 		?> <script>window.location='monitoring.php';</script> <?php
+	// rincian
+	}else if (isset($_GET['idrincian'])) {
+		mysqli_query($kon, "DELETE FROM rincian WHERE idrincian='$_REQUEST[idrincian]'");
+		?> <script>window.location='rincian.php';</script> <?php
 	}
 ?>

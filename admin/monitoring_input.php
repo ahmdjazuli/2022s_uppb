@@ -32,6 +32,10 @@
                                 <input class="form-control" type="text" name="lokasi" required>
                             </div>
                             <div class="form-group">
+                                <label>Total Pohon Karet</label>
+                                <input class="form-control" type="number" name="total" required>
+                            </div>
+                            <div class="form-group">
                                 <label>Keterangan</label>
                                 <input class="form-control" type="text" name="ket" required>
                             </div>
@@ -58,8 +62,9 @@
     $lokasi = $_REQUEST['lokasi'];
     $id     = $_REQUEST['id'];
     $ket    = $_REQUEST['ket'];
+    $total  = $_REQUEST['total'];
         
-    $hasil = mysqli_query($kon,"INSERT INTO monitoring (tgl,lokasi,id,ket) VALUES ('$tgl','$lokasi','$id','$ket')");
+    $hasil = mysqli_query($kon,"INSERT INTO monitoring (tgl,lokasi,id,ket,total) VALUES ('$tgl','$lokasi','$id','$ket','$total')");
 
     if($hasil){
       ?> <script>alert('Berhasil Disimpan!'); window.location = 'monitoring.php';</script><?php

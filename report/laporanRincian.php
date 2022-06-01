@@ -3,13 +3,13 @@ require "../kon.php";
 	$bulan = $_REQUEST['bulan'];
 	$tahun = $_REQUEST['tahun'];
 	if($bulan AND $tahun){
-		$result = mysqli_query($kon, "SELECT * FROM monitoring INNER JOIN user ON monitoring.id = user.id WHERE MONTH(tgl) = '$bulan' AND YEAR(tgl) = '$tahun' ORDER BY tgl ASC");
+		$result = mysqli_query($kon, "SELECT * FROM monitoring INNER JOIN rincian ON monitoring.idmonitoring = rincian.idmonitoring WHERE MONTH(tgl) = '$bulan' AND YEAR(tgl) = '$tahun' ORDER BY tgl ASC");
 	}else if($tahun AND empty($bulan)){
-		$result = mysqli_query($kon, "SELECT * FROM monitoring INNER JOIN user ON monitoring.id = user.id WHERE YEAR(tgl) = '$tahun' ORDER BY tgl ASC");
+		$result = mysqli_query($kon, "SELECT * FROM monitoring INNER JOIN rincian ON monitoring.idmonitoring = rincian.idmonitoring WHERE YEAR(tgl) = '$tahun' ORDER BY tgl ASC");
 	}
 ?>
 <?php require('atas.php') ?>
-<h2 style="text-align: center;">Laporan Pemantauan Daerah Kebun</h2>
+<h2 style="text-align: center;">Laporan Rincian Pemantauan</h2>
 <h4 style="text-align: center;">
 	<?php 
 		if($bulan AND $tahun){
@@ -26,12 +26,10 @@ require "../kon.php";
     <thead class="text-center">
       <tr>
         <th>No</th>
-        <th>Tanggal (WITA)</th>
-        <th>Nama Petani</th>
-        <th>Lokasi</th>
-        <th>Luas Lahan</th>
-        <th>Total Pohon Karet</th>
-        <th>Keterangan</th>
+        <th>Nama Pemantauan</th>
+        <th>Jumlah Pohon</th>
+        <th>Usia Pohon</th>
+        <th>Pupuk</th>
       </tr>
     </thead>
 <?php 
@@ -40,12 +38,10 @@ while( $data = mysqli_fetch_array($result) ) :
  ?> 
 <tr class="text-center">
 		<td><?= $i++; ?></td>
-		<td><?= date('d/m/Y H:i',strtotime($data['tgl'])); ?></td>
-    <td><?= $data['nama'] ?></td>
-    <td><?= $data['lokasi'] ?></td>
-    <td><?= $data['luaslahan'] ?></td>
-    <td><?= $data['total'] ?></td>
-    <td><?= $data['ket'] ?></td>
+		<td><?= '('.date('d/m/Y H:i',strtotime($data['tgl'])).') '.$data['ket']; ?></td>
+	  <td><?= $data['jumlahpohon'] ?></td>
+	  <td><?= $data['usiapohon'] ?> tahun</td>
+	  <td><?= $data['pupuk'] ?></td>
 </tr>
 <?php endwhile; ?>
   </table>
@@ -55,8 +51,8 @@ while( $data = mysqli_fetch_array($result) ) :
 	</div>
 	<div id="kanan">
 		Mengetahui,<br>
-		<?php QRcode::png($kode,"LaporanMonitoring.png","M",2,2); ?>
-    <img src="laporanMonitoring.png"><br>
+		<?php QRcode::png($kode,"LaporanRincian.png","M",2,2); ?>
+    <img src="laporanRincian.png"><br>
 		Penanggung Jawab
 	</div>
 </div>	
