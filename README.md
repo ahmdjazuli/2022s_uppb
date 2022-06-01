@@ -28,7 +28,7 @@ Fitur Website :
 3. Multi User (3) (Admin, Pelanggan(sebagai PT.) dan Petani(sebagai Penjual/Penerima Bantuan Pembeku))
 4. Halaman Utama (Home, Daftar Barang, Lokasi dan Masuk)
 5. Data Master terdiri (2) dari : Data User, Data Barang
-6. Data Report terdiri (7) dari : Data Petani, Barang Masuk, Pemantauan Daerah Kebun, Rincian Pemantauan, Transaksi, Pembeku, Laba Kotor Bersih
+6. Data Report terdiri (8) dari : Data Petani, Barang Masuk, Pemantauan Daerah Kebun, Rincian Pemantauan, Transaksi, Pembeku, Laba Kotor Bersih, Grafik Pendapatan Transaksi
 7. Alert Standar
 8. CRUD Standar
 9. Fitur Backup dan Restore Database
