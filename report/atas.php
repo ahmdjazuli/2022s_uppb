@@ -7,7 +7,6 @@ if(mysqli_num_rows($result)==0){
     ?> <script>alert('Data Tidak Ditemukan');window.location = '<?= $lokasi ?>';</script> <?php
  }
 
-$kode = 'localhost'.htmlspecialchars($_SERVER['REQUEST_URI']);
 require_once('../phpqrcode/qrlib.php');
 ?>
 <!DOCTYPE html>

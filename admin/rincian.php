@@ -84,7 +84,7 @@
                                                     <td><?= $data['pupuk'] ?></td>
                                                     <td>
                                                         <a href="rincian_edit.php?idrincian=<?php echo $data['idrincian']; ?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil-alt"></i></a>
-                                                        <a href="delete.php?idrincian=<?php echo $data['idrincian'] ?>" class="btn btn-primary btn-sm"><i class="fa fa-trash"></i></a>
+                                                        <button class="btn btn-primary btn-sm" type="button" onclick="return confirm('Yakin ingin Menghapus?');"><a href="delete.php?idrincian=<?php echo $data['idrincian'] ?>" style="color: white;"><i class="fa fa-trash"></i></a></button>
                                                     </td>
                                                 </tr>
                                         <?php } ?>

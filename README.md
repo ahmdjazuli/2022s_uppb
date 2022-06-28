@@ -3,6 +3,13 @@ Judul Aplikasi : Aplikasi Pembelian dan Penjualan pada Unit Disbunak UPPB Banjar
 
 Joki untuk kebutuhan Skripsi Mahasiswa Uniska Banjarbaru.
 
+Revisian 1 :
+1. Menambahkan Fitur "Konfirmasi Hapus", tidak hanya di data petani TAPI di Semua data. 
+2. Bagian "TTD Qrcode", ditambahkan tgl dan hasil scan QRcode menunjukkan nama penanggung jawabnya.
+3. Kolom "Kelompok Tani" ditambahkan di "Data Petani" dan cetak report ada filternya.
+4. Buat Akun bagi Pelanggan di Halaman Depan sudah tersedia, Pemberitahuan akun ditolak/aktif melalui Whatsapp.
+5. Jika Akun belum aktif (Menunggu) maka belum bisa login.
+
 Pembaharuan :
 1. Semua Filter Cetak pake Bulan dan Tahun.
 2. TTD menggunakan qrcode. 
@@ -19,8 +26,6 @@ Bahasa Pemograman :
 1. PHP 7 Native
 2. Javascript
 3. CSS
-
-Petunjuk :
 
 Fitur Website :
 1. Template Pullo (Merah Hitam)

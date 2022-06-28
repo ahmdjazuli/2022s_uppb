@@ -90,7 +90,7 @@
                                                     <td><?= number_format($data['total'],0,'.','.') ?></td>
                                                     <td>
                                                         <a href="masuk_edit.php?idinventorimasuk=<?php echo $data['idinventorimasuk']; ?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil-alt"></i></a>
-                                                        <a href="delete.php?idinventorimasuk=<?php echo $data['idinventorimasuk'] ?>" class="btn btn-primary btn-sm"><i class="fa fa-trash"></i></a>
+                                                        <button class="btn btn-primary btn-sm" type="button" onclick="return confirm('Yakin ingin Menghapus?');"><a href="delete.php?idinventorimasuk=<?php echo $data['idinventorimasuk'] ?>" style="color: white;"><i class="fa fa-trash"></i></a></button>
                                                     </td>
                                                 </tr>
                                         <?php } ?>

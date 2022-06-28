@@ -82,7 +82,7 @@
                                                     <td><?= $data['catatan'] ?></td>
                                                     <td>
                                                     <a href="pembeku_edit.php?notransaksi=<?php echo $data['notransaksi']; ?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil-alt"></i></a>
-                                                    <a href="delete.php?notransaksi=<?php echo $data['notransaksi'] ?>&level=pembeku" class="btn btn-primary btn-sm"><i class="fa fa-trash"></i></a>
+                                                    <button class="btn btn-primary btn-sm" type="button" onclick="return confirm('Yakin ingin Menghapus?');"><a href="delete.php?notransaksi=<?php echo $data['notransaksi'] ?>&level=pembeku" style="color: white;"><i class="fa fa-trash"></i></a></button>
                                                     </td>
                                                 </tr>
                                         <?php } ?>

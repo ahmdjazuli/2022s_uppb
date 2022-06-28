@@ -19,7 +19,6 @@ require "../kon.php";
 		}
 	?>
 </h4>
-<h5 class="text-center">Dicetak pada tanggal : <?= tgl_indo(date('Y-m-d')); ?></h5>
 <br>
 <div class="container">
   <table class="table table-bordered table-sm" border="1px" style="font-weight: 400;">
@@ -54,8 +53,9 @@ while( $data = mysqli_fetch_array($result) ) :
 	<div id="kiri">
 	</div>
 	<div id="kanan">
-		Mengetahui,<br>
-		<?php QRcode::png($kode,"LaporanMonitoring.png","M",2,2); ?>
+		Banjarbaru, <?= tgl_indo(date('Y-m-d')); ?><br>
+    Mengetahui,<br>
+    <?php QRcode::png('Penanggung Jawab : Budi Waluyo',"LaporanMonitoring.png","M",2,2); ?>
     <img src="laporanMonitoring.png"><br>
 		Penanggung Jawab
 	</div>

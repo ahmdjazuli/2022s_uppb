@@ -1,10 +1,23 @@
 <?php 
 require "../kon.php"; error_reporting(0);
-	$result = mysqli_query($kon, "SELECT * FROM user WHERE level ='Petani' ORDER BY nama ASC");
+$kelompok = $_REQUEST['kelompok'];
+if($kelompok){
+  $result = mysqli_query($kon, "SELECT * FROM user WHERE level ='Petani' AND kelompok = '$kelompok' ORDER BY nama ASC");
+}else{
+  $result = mysqli_query($kon, "SELECT * FROM user WHERE level ='Petani' ORDER BY nama ASC");
+}
 ?>
 <?php require('atas.php') ?>
 <h2 style="text-align: center;">Laporan Data Petani</h2>
-<h5 class="text-center">Dicetak pada tanggal : <?= tgl_indo(date('Y-m-d')); ?></h5>
+<h4 style="text-align: center;">
+  <?php 
+    if($kelompok){
+      echo "Kelompok Tani : <b>". $kelompok."</b>";
+    }else{
+      echo "Kelompok Tani : <b>Semua</b>";
+    }
+  ?>
+</h4>
 <br>
 <div class="container">
   <table class="table table-bordered table-sm" border="1px" style="font-weight: 400;">
@@ -13,7 +26,8 @@ require "../kon.php"; error_reporting(0);
         <th>No</th>
         <th>Nama Lengkap</th>
         <th>NIK</th>
-        <th>Username</th>
+        <th>Luas Lahan</th>
+        <th>Kelompok Tani</th>
         <th>Telp</th>
         <th>Alamat</th>
       </tr>
@@ -26,7 +40,8 @@ while( $data = mysqli_fetch_array($result) ) :
 		<td><?= $i++; ?></td>
 		<td><?= $data['nama'] ?></td>
     <td><?= $data['nik'] ?></td>
-    <td><?= $data['username'] ?></td>
+    <td><?= $data['luaslahan'] ?></td>
+    <td><?= $data['kelompok'] ?></td>
     <td><?= $data['telp'] ?></td>
     <td><?= $data['alamat'] ?></td>
 </tr>
@@ -37,8 +52,9 @@ while( $data = mysqli_fetch_array($result) ) :
   <div id="kiri">
   </div>
   <div id="kanan">
+    Banjarbaru, <?= tgl_indo(date('Y-m-d')); ?><br>
     Mengetahui,<br>
-    <?php QRcode::png($kode,"LaporanPetani.png","M",2,2); ?>
+    <?php QRcode::png('Penanggung Jawab : Budi Waluyo',"LaporanPetani.png","M",2,2); ?>
     <img src="laporanPetani.png"><br>
     Penanggung Jawab
   </div>

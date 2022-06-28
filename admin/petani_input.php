@@ -28,6 +28,17 @@
                                 <input class="form-control" name="telp" placeholder="Contoh : 628975548712">
                             </div>
                             <div class="form-group">
+                                <label>Kelompok Tani</label>
+                                <select class="form-control" name="kelompok" required>
+                                    <option value="Permata">Permata</option>
+                                    <option value="Harapan Bersama">Harapan Bersama</option>
+                                    <option value="Suka Makmur">Suka Makmur</option>
+                                    <option value="Langsat Membangun">Langsat Membangun</option>
+                                    <option value="Riam Pinang">Riam Pinang</option>
+                                    <option value="Suka Maju">Suka Maju</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <label>Alamat</label>
                                 <textarea class="form-control" name="alamat" required></textarea>
                             </div>
@@ -55,8 +66,9 @@
     $nik        = $_REQUEST['nik'];
     $telp       = $_REQUEST['telp'];
     $alamat     = $_REQUEST['alamat'];
+    $kelompok   = $_REQUEST['kelompok'];
 
-    $tambah = mysqli_query($kon,"INSERT INTO user(username,password,nama,nik,telp,alamat,level) VALUES ('$user','$user','$nama','$nik','$telp','$alamat','Petani')");
+    $tambah = mysqli_query($kon,"INSERT INTO user(username,password,nama,nik,telp,alamat,level,kelompok) VALUES ('$user','$user','$nama','$nik','$telp','$alamat','Petani','$kelompok')");
     if($tambah){
       ?> <script>alert("Berhasil Disimpan");window.location='petani.php';</script> <?php
     }else{

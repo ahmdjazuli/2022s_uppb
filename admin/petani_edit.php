@@ -27,6 +27,18 @@
                                 <input class="form-control" name="telp" value="<?= $data['telp'] ?>" required>
                             </div>
                             <div class="form-group">
+                                <label>Kelompok Tani</label>
+                                <select class="form-control" name="kelompok" required>
+                                    <option value="<?= $data['kelompok'] ?>"><?= $data['kelompok'] ?></option>
+                                    <option value="Permata">Permata</option>
+                                    <option value="Harapan Bersama">Harapan Bersama</option>
+                                    <option value="Suka Makmur">Suka Makmur</option>
+                                    <option value="Langsat Membangun">Langsat Membangun</option>
+                                    <option value="Riam Pinang">Riam Pinang</option>
+                                    <option value="Suka Maju">Suka Maju</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <label>Luas Lahan</label>
                                 <input class="form-control" name="luaslahan" value="<?= $data['luaslahan'] ?>" required>
                             </div>
@@ -58,8 +70,9 @@
     $telp   = $_REQUEST['telp'];
     $alamat = $_REQUEST['alamat'];
     $nik    = $_REQUEST['nik'];
+    $kelompok    = $_REQUEST['kelompok'];
 
-    $ubah = mysqli_query($kon,"UPDATE user SET luaslahan = '$luaslahan', nama = '$nama', telp = '$telp', alamat = '$alamat', nik = '$nik' WHERE id = '$id'");
+    $ubah = mysqli_query($kon,"UPDATE user SET kelompok = '$kelompok', luaslahan = '$luaslahan', nama = '$nama', telp = '$telp', alamat = '$alamat', nik = '$nik' WHERE id = '$id'");
     if($ubah){
       ?> <script>alert("Berhasil Diubah");window.location='petani.php';</script> <?php
     }else{

@@ -4,6 +4,8 @@
 	?> <script>alert('Berhasil Dihapus');</script> <?php
 	// pengguna
 	if (isset($_GET['id']) AND $_GET['level'] == 'user') {
+		$query = mysqli_query($kon, "SELECT * FROM user WHERE id='$_REQUEST[id]'");
+		$row = mysqli_fetch_array($query); unlink('../images/'.$row['file1']);unlink('../images/'.$row['file2']);unlink('../images/'.$row['file3']);
 		mysqli_query($kon, "DELETE FROM user WHERE id='$_REQUEST[id]'");
 		?> <script>window.location='user.php';</script> <?php
 	// petani

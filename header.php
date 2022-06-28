@@ -54,6 +54,7 @@
                            <?php }else{ ?>
                            <a class="nav-item nav-link" href="daftar.php">Daftar Barang</a>
                            <a class="nav-item nav-link" href="lokasi.php">Lokasi</a>
+                           <a class="nav-item nav-link" href="buatakun.php">Buat Akun</a>
                            <a class="nav-item nav-link" href="masuk.php">Masuk</a>
                            <?php } ?>
                         </div>

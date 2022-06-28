@@ -19,7 +19,7 @@ error_reporting(0);
 			$_SESSION['id'] = $cek['id'];
 			$_SESSION['level'] = "Petani";
 			?> <script>window.location='index.php'</script> <?php
-		}else if($cek['level'] == 'Pelanggan'){
+		}else if($cek['level'] == 'Pelanggan' AND $cek['status'] == 'Aktif'){
 			$_SESSION['username'] = $username;
 			$_SESSION['id'] = $cek['id'];
 			$_SESSION['level'] = "Pelanggan";
