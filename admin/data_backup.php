@@ -5,7 +5,7 @@
     $mysqlHostName      = "localhost";
     $DbName             = "pkl_uppb";
     $backup_name        = "pkl_uppb.sql";
-    $tables             = array("user", "transaksi", "inventori", "inventorimasuk", "detail", "biaya");
+    $tables             = array("user", "transaksi", "inventori", "inventorimasuk", "detail", "monitoring", "rincian");
  
 
     Export_Database($mysqlHostName,$mysqlUserName,$mysqlPassword,$DbName,  $tables=false, $backup_name=false );

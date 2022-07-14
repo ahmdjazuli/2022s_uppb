@@ -54,13 +54,13 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                <button class="btn btn-primary btn-lg"><a href="transaksi_input.php" style="color: white; text-decoration: none">+Data Transaksi</a></button>
+                <button class="btn btn-primary btn-lg"><a href="transaksi_input.php" style="color: white; text-decoration: none">+Data Penjualan</a></button>
                 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"> Cetak </button></h1>
             </div>
         </div>
         <?php if(isset($_GET['nota'])){ ?>
             <div class="alert alert-success">
-                Klik pada No.Transaksi untuk <a href="transaksi.php" class="alert-link">Mencetak Nota</a>.
+                Klik pada No.Penjualan untuk <a href="transaksi.php" class="alert-link">Mencetak Nota</a>.
             </div>
         <?php } ?>
         <div class="row">
@@ -73,7 +73,7 @@
                                     <tr>
                                         <th>No</th>
                                         <th>Waktu (WITA)</th>
-                                        <th>No.Transaksi</th>
+                                        <th>No.Penjualan</th>
                                         <th>Nama Pelanggan</th>
                                         <th>Catatan</th>
                                         <th>Total</th>

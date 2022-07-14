@@ -3,6 +3,12 @@ Judul Aplikasi : Aplikasi Pembelian dan Penjualan pada Unit Disbunak UPPB Banjar
 
 Joki untuk kebutuhan Skripsi Mahasiswa Uniska Banjarbaru.
 
+Revisian 2 :
+1. Nama Laba kotor/bersih -> Laba.
+2. Nama Barang masuk -> Pembelian Bahan Pokok.
+3. Nama Transaksi -> Penjualan.
+4. Dihalaman Utama (admin) sudah bisa dicetak semua report termasuk grafik.
+
 Revisian 1 :
 1. Menambahkan Fitur "Konfirmasi Hapus", tidak hanya di data petani TAPI di Semua data. 
 2. Bagian "TTD Qrcode", ditambahkan tgl dan hasil scan QRcode menunjukkan nama penanggung jawabnya.
@@ -33,7 +39,7 @@ Fitur Website :
 3. Multi User (3) (Admin, Pelanggan(sebagai PT.) dan Petani(sebagai Penjual/Penerima Bantuan Pembeku))
 4. Halaman Utama (Home, Daftar Barang, Lokasi dan Masuk)
 5. Data Master terdiri (2) dari : Data User, Data Barang
-6. Data Report terdiri (8) dari : Data Petani, Barang Masuk, Pemantauan Daerah Kebun, Rincian Pemantauan, Transaksi, Pembeku, Laba Kotor Bersih, Grafik Pendapatan Transaksi
+6. Data Report terdiri (8) dari : Data Petani, Pembelian Bahan Pokok, Pemantauan Daerah Kebun, Rincian Pemantauan, Penjualan, Pembeku, Laba, Grafik Pendapatan Penjualan
 7. Alert Standar
 8. CRUD Standar
 9. Fitur Backup dan Restore Database

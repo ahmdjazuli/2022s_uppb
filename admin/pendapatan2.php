@@ -53,7 +53,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header"><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"> Cetak Data Laba Kotor Bersih </button></h1>
+                <h1 class="page-header"><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"> Cetak Data Laba </button></h1>
             </div>
         </div>
         <div class="row">
@@ -66,8 +66,8 @@
                                     <tr>
                                         <th>No</th>
                                         <th>Hari</th>
-                                        <th>Transaksi</th>
-                                        <th>Barang Masuk</th>
+                                        <th>Penjualan</th>
+                                        <th>Pembelian Bahan Pokok</th>
                                         <th>Laba Bersih</th>
                                     </tr>
                                 </thead>

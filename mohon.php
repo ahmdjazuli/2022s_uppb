@@ -1,6 +1,6 @@
 <?php require('header.php') ?>
 	</div>
-  <div class="collection_text">TRANSAKSI</div>
+  <div class="collection_text">PENJUALAN</div>
     <div class="layout_padding collection_section">
     	<div class="container">
            <div class="panel panel-default">
@@ -14,7 +14,7 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Waktu (WITA)</th>
-                                    <th>No.Transaksi</th>
+                                    <th>No.Penjualan</th>
                                     <th>Catatan</th>
                                     <th>Total</th>
                                     <th>Status</th>
@@ -45,7 +45,7 @@
                                     <?php if(mysqli_num_rows($query)<=0){
                                         ?>
                                             <tr class="odd gradeX" style="color:black">
-                                                <td colspan="11"><h1 class="text-center">Tidak Ada Transaksi</h1></td>
+                                                <td colspan="11"><h1 class="text-center">Tidak Ada Penjualan</h1></td>
                                             </tr>
                                         <?php
                                     } ?>

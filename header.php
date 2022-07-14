@@ -44,7 +44,7 @@
                         <div class="navbar-nav">
                            <?php if($memori['level']=='Pelanggan'){ ?>
                               <a class="nav-item nav-link" href="daftar.php">Daftar Barang</a>
-                              <a class="nav-item nav-link" href="mohon.php">Transaksi</a>
+                              <a class="nav-item nav-link" href="mohon.php">Penjualan</a>
                               <a class="nav-item nav-link" href="profil.php?id=<?=$memori['id'] ?>">Profil</a>
                               <a class="nav-item nav-link" href="keluar.php">Keluar</a>
                            <?php }else if($memori['level']=='Petani'){ ?>

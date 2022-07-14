@@ -9,7 +9,7 @@ require "../kon.php"; error_reporting(0);
   }
 ?>
 <?php require('atas.php') ?>
-<h2 style="text-align: center;">Laporan Laba Kotor Bersih</h2>
+<h2 style="text-align: center;">Laporan Laba</h2>
 <h4 style="text-align: center;">
   <?php 
     if($bulan AND $tahun){
@@ -26,8 +26,8 @@ require "../kon.php"; error_reporting(0);
       <tr>
         <th>No</th>
         <th>Hari</th>
-        <th>Transaksi</th>
-        <th>Barang Masuk</th>
+        <th>Penjualan</th>
+        <th>Pembelian Bahan Pokok</th>
         <th>Laba Bersih</th>
       </tr>
     </thead>

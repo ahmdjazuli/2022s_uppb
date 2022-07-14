@@ -53,7 +53,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header"><button class="btn btn-primary btn-lg"><a href="masuk_input.php" style="color: white; text-decoration: none">+Data Barang Masuk</a></button>
+                <h1 class="page-header"><button class="btn btn-primary btn-lg"><a href="masuk_input.php" style="color: white; text-decoration: none">+Data Pembelian Bahan Pokok</a></button>
                 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"> Cetak </button></h1>
             </div>
         </div>

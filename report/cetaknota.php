@@ -26,7 +26,7 @@
 </div>
 <div style="width: 33%; float: left; font-weight: normal;">
 	<h3>Cetak Nota <?= $notransaksi ?></h3>
-	<p>Waktu Transaksi : <?= date('d/m/Y,H:i',strtotime($now['tgl'])) ?> WITA</p>
+	<p>Waktu Penjualan : <?= date('d/m/Y,H:i',strtotime($now['tgl'])) ?> WITA</p>
 </div>
 <div style="width: 33%; float: left; font-weight: normal; margin-top: 15px;">
 	<img src="../images/logo.png" style="width: 100px; margin-top: -20px; float: left; ">

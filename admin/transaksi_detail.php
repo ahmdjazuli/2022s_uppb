@@ -6,7 +6,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12">
-            <h3 class="page-header">Detail/No. Transaksi : <?= $notransaksi ?></h3>
+            <h3 class="page-header">Detail/No. Penjualan : <?= $notransaksi ?></h3>
             <button class="btn btn-danger" onclick="history.back()">Kembali</button>
             <button class="btn btn-primary"><a style="color:white; text-decoration: none;" href="../report/cetaknota.php?notransaksi=<?= $notransaksi ?>" target="_blank">Cetak Nota</a></button>
         </div>

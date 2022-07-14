@@ -9,7 +9,7 @@ require "../kon.php";
 	}
 ?>
 <?php require('atas.php') ?>
-<h2 style="text-align: center;">Laporan Barang Masuk</h2>
+<h2 style="text-align: center;">Laporan Pembelian Bahan Pokok</h2>
 <h4 style="text-align: center;">
 	<?php 
 		if($bulan AND $tahun){

@@ -77,7 +77,7 @@
                         <a href="inventori.php"><i class="fa fa-box-open fa-fw"></i> Stok Barang</a>
                     </li>
                     <li>
-                        <a href="masuk.php"><i class="fa fa-shopping-basket fa-fw"></i> Barang Masuk</a>
+                        <a href="masuk.php"><i class="fa fa-shopping-basket fa-fw"></i> Pembelian Bahan Pokok</a>
                     </li>
                 </ul>
             </li>
@@ -94,13 +94,13 @@
             </li>
             
             <li>
-                <a href="transaksi.php"><i class="fa fa-shopping-bag fa-fw"></i> Transaksi</a>
+                <a href="transaksi.php"><i class="fa fa-shopping-bag fa-fw"></i> Penjualan</a>
             </li>
             <li>
                 <a href="pembeku.php"><i class="fa fa-hands-helping fa-fw"></i> Bantuan Pembeku</a>
             </li>
             <li>
-                <a href="pendapatan2.php"><i class="fa fa-dollar-sign fa-fw"></i> Laba Kotor Bersih</a>
+                <a href="pendapatan2.php"><i class="fa fa-dollar-sign fa-fw"></i> Laba</a>
             </li>
             <li>
                 <a href="data_backup.php" onclick="return confirm('Yakin ingin Backup?');"><i class="fa fa-database fa-fw"></i> Backup Database</a>

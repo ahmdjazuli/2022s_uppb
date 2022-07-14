@@ -3,7 +3,7 @@
     <div class="container">
         <br><br><br><br><br><br><div class="row">
             <div class="col-lg-12">
-                <h2>Tambah Transaksi</h2>
+                <h2>Tambah Penjualan</h2>
             </div>
         </div>
         <div class="row">
@@ -161,7 +161,7 @@
         }
 
         if($detail){
-            ?> <script>alert('Transaksi berhasil dikirim, tunggu konfirmasi Admin.'); window.location = 'mohon.php';</script><?php
+            ?> <script>alert('Penjualan berhasil dikirim, tunggu konfirmasi Admin.'); window.location = 'mohon.php';</script><?php
             unset($_SESSION['keranjang']);
         }else{
             ?> <script>alert('Gagal, cek kembali!.'); window.location = 'mohon_input.php';</script><?php

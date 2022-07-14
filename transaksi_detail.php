@@ -3,13 +3,13 @@
   $ongkir = mysqli_query($kon, "SELECT * FROM transaksi WHERE notransaksi = '$notransaksi'");
   $row    = mysqli_fetch_array($ongkir);  ?>
     </div>
-  <div class="collection_text">DETAIL TRANSAKSI</div>
+  <div class="collection_text">DETAIL PENJUALAN</div>
     <div class="layout_padding collection_section">
         <div class="container">
            <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="table-responsive">
-                        <h1>No. Transaksi : <?= $notransaksi ?></h1>
+                        <h1>No. Penjualan : <?= $notransaksi ?></h1>
                         <table class="table table-bordered table-hover " id="dataTables-example">
                             <thead class="success table-dark">
                                 <tr>

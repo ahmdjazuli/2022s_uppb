@@ -71,3 +71,4 @@
   })
 })
 </script>
+<script src="js/time.js"></script>

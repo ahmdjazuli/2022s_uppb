@@ -9,7 +9,7 @@ require "../kon.php";
   }
 ?>
 <?php require('atas.php') ?>
-<h2 style="text-align: center;">Laporan Transaksi</h2>
+<h2 style="text-align: center;">Laporan Penjualan</h2>
 <h4 style="text-align: center;">
   <?php 
     if($bulan AND $tahun){
@@ -26,7 +26,7 @@ require "../kon.php";
       <tr>
         <th>No</th>
         <th>Waktu (WITA)</th>
-        <th>No.Transaksi</th>
+        <th>No.Penjualan</th>
         <th>Nama Pelanggan</th>
         <th>Catatan</th>
         <th>Total</th>

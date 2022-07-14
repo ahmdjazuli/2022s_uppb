@@ -1,9 +1,9 @@
-<?php require('atas.php'); error_reporting(0); ?>
+'<?php require('atas.php'); error_reporting(0); ?>
 <div id="page-wrapper">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">Tambah Data Transaksi</h2>
+                <h2 class="page-header">Tambah Data Penjualan</h2>
             </div>
         </div>
         <div class="row">
