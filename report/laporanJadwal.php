@@ -3,13 +3,13 @@ require "../kon.php";
 	$bulan = $_REQUEST['bulan'];
 	$tahun = $_REQUEST['tahun'];
 	if($bulan AND $tahun){
-		$result = mysqli_query($kon, "SELECT * FROM monitoring INNER JOIN rincian ON monitoring.idmonitoring = rincian.idmonitoring WHERE MONTH(tgl) = '$bulan' AND YEAR(tgl) = '$tahun' ORDER BY tgl ASC");
+		$result = mysqli_query($kon, "SELECT * FROM jadwal INNER JOIN user ON jadwal.id = user.id WHERE MONTH(tgl) = '$bulan' AND YEAR(tgl) = '$tahun' ORDER BY tgl ASC");
 	}else if($tahun AND empty($bulan)){
-		$result = mysqli_query($kon, "SELECT * FROM monitoring INNER JOIN rincian ON monitoring.idmonitoring = rincian.idmonitoring WHERE YEAR(tgl) = '$tahun' ORDER BY tgl ASC");
+		$result = mysqli_query($kon, "SELECT * FROM jadwal INNER JOIN user ON jadwal.id = user.id WHERE YEAR(tgl) = '$tahun' ORDER BY tgl ASC");
 	}
 ?>
 <?php require('atas.php') ?>
-<h2 style="text-align: center;">Laporan Rincian Kebun</h2>
+<h2 style="text-align: center;">Laporan Jadwal Petani</h2>
 <h4 style="text-align: center;">
 	<?php 
 		if($bulan AND $tahun){
@@ -25,10 +25,11 @@ require "../kon.php";
     <thead class="text-center">
       <tr>
         <th>No</th>
-        <th>Nama Pemantauan</th>
-        <th>Jumlah Pohon</th>
-        <th>Usia Pohon</th>
-        <th>Pupuk</th>
+        <th>Tanggal</th>
+        <th>NIK</th>
+        <th>Nama Petani</th>
+        <th>Luas Lahan</th>
+        <th>Kelompok Tani</th>
       </tr>
     </thead>
 <?php 
@@ -37,10 +38,11 @@ while( $data = mysqli_fetch_array($result) ) :
  ?> 
 <tr class="text-center">
 		<td><?= $i++; ?></td>
-		<td><?= '('.date('d/m/Y H:i',strtotime($data['tgl'])).') '.$data['ket']; ?></td>
-	  <td><?= $data['jumlahpohon'] ?></td>
-	  <td><?= $data['usiapohon'] ?> tahun</td>
-	  <td><?= $data['pupuk'] ?></td>
+		<td><?= date('d/m/Y',strtotime($data['tgl'])) ?></td>
+    <td><?= $data['nik'] ?></td>
+    <td><?= $data['nama'] ?></td>
+    <td><?= $data['luaslahan'] ?></td>
+    <td><?= $data['kelompok'] ?></td>
 </tr>
 <?php endwhile; ?>
   </table>
@@ -51,8 +53,8 @@ while( $data = mysqli_fetch_array($result) ) :
 	<div id="kanan">
 		Banjarbaru, <?= tgl_indo(date('Y-m-d')); ?><br>
     Mengetahui,<br>
-    <?php QRcode::png('Penanggung Jawab : Budi Waluyo',"LaporanKebun.png","M",2,2); ?>
-    <img src="laporanKebun.png"><br>
+		<?php QRcode::png('Penanggung Jawab : Budi Waluyo',"LaporanJadwal.png","M",2,2); ?>
+    <img src="laporanJadwal.png"><br>
 		Penanggung Jawab
 	</div>
 </div>	

@@ -71,6 +71,9 @@
                 <a href="petani.php"><i class="fa fa-user-circle fa-fw"></i> Data Petani</a>
             </li>
             <li>
+                <a href="jadwal.php"><i class="fa fa-user-clock fa-fw"></i> Data Jadwal Petani</a>
+            </li>
+            <li>
                 <a href="#"><i class="fa fa-tasks fa-fw"></i> Data Barang<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
@@ -85,10 +88,10 @@
                 <a href="#"><i class="fa fa-tasks fa-fw"></i> Pemantauan<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="monitoring.php"><i class="fa fa-search-location fa-fw"></i> Daerah Kebun</a>
+                        <a href="monitoring.php"><i class="fa fa-search-location fa-fw"></i> Pemantauan Daerah Kebun</a>
                     </li>
                     <li>
-                        <a href="rincian.php"><i class="fa fa-search fa-fw"></i> Rincian Pemantauan</a>
+                        <a href="rincian.php"><i class="fa fa-search fa-fw"></i> Rincian Kebun</a>
                     </li>
                 </ul>
             </li>

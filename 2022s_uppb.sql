@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 28, 2022 at 01:01 PM
+-- Generation Time: Jul 18, 2022 at 08:38 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -149,6 +149,30 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `jadwal`
+--
+
+CREATE TABLE `jadwal` (
+  `idjadwal` int(5) NOT NULL,
+  `id` int(5) NOT NULL,
+  `tgl` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `jadwal`
+--
+
+INSERT INTO `jadwal` (`idjadwal`, `id`, `tgl`) VALUES
+(2, 8, '2022-07-18'),
+(3, 6, '2022-07-17'),
+(4, 4, '2022-07-16'),
+(5, 9, '2022-07-14'),
+(6, 8, '2022-07-13'),
+(7, 6, '2022-07-12');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `monitoring`
 --
 
@@ -284,6 +308,13 @@ ALTER TABLE `inventorimasuk`
   ADD KEY `id` (`id`);
 
 --
+-- Indexes for table `jadwal`
+--
+ALTER TABLE `jadwal`
+  ADD PRIMARY KEY (`idjadwal`),
+  ADD KEY `id` (`id`);
+
+--
 -- Indexes for table `monitoring`
 --
 ALTER TABLE `monitoring`
@@ -333,6 +364,12 @@ ALTER TABLE `inventorimasuk`
   MODIFY `idinventorimasuk` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
+-- AUTO_INCREMENT for table `jadwal`
+--
+ALTER TABLE `jadwal`
+  MODIFY `idjadwal` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT for table `monitoring`
 --
 ALTER TABLE `monitoring`
@@ -366,6 +403,12 @@ ALTER TABLE `detail`
 ALTER TABLE `inventorimasuk`
   ADD CONSTRAINT `inventorimasuk_ibfk_1` FOREIGN KEY (`idinventori`) REFERENCES `inventori` (`idinventori`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `inventorimasuk_ibfk_2` FOREIGN KEY (`id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `jadwal`
+--
+ALTER TABLE `jadwal`
+  ADD CONSTRAINT `jadwal_ibfk_1` FOREIGN KEY (`id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `monitoring`
